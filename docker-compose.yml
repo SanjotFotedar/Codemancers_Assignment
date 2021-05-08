@@ -5,14 +5,14 @@ services:
     restart: always
     build: ./web
     expose:
-      - "8000"
+      - "5000"
     links:
       - postgres:postgres
     volumes:
       - web-data:/usr/src/app/static
     env_file: 
       - .env
-    command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
+    command: /usr/local/bin/gunicorn -w 2 -b :5000 app:app
 
   nginx:
     restart: always
