@@ -32,14 +32,15 @@ services:
       - db-data:/var/lib/postgresql/data
     command: "true"
 
-															  postgres:
-															      restart: always
-															          image: postgres:latest
-																      volumes:
-																            - db-data:/var/lib/postgresql/data
-																	        ports:
-																		      - "5432:5432"
 
+  postgres:
+    restart: always
+    image: postgres:latest
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+      
 volumes:
       db-data:
       web-data:
