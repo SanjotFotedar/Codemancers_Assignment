@@ -41,5 +41,5 @@ services:
 																		      - "5432:5432"
 
 volumes:
-	db-data:
-	web-data:
+      db-data:
+      web-data:
